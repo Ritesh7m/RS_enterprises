@@ -1,0 +1,100 @@
+.product-section {
+  padding: 40px;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #23066d;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 30px 0 20px;
+  color: #333;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns layout */
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px; /* Set a smaller fixed height for consistency */
+  object-fit: cover; /* Ensures the image maintains aspect ratio */
+  border-radius: 8px;
+}
+
+.product-info {
+  margin-top: 15px;
+}
+
+.product-info h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 1em;
+  color: #555;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.actual-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.discount-price {
+  font-weight: bold;
+  color: #E60000;
+}
+
+.discount {
+  font-weight: bold;
+  color: green;
+}
+
+/* Divider between sections */
+.divider {
+  margin: 40px 0;
+  border: none;
+  border-top: 2px solid #ddd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 column layout for mobile */
+  }
+}
