@@ -37,21 +37,7 @@
   color: #23066d; /* Match the theme color */
 }
 
-.hero-right {
-  flex: 1;
-}
 
-.hero-right ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.hero-right li {
-  margin-bottom: 10px;
-  font-weight: 500;
-}
 
 
 /* Services Content Section */
