@@ -20,15 +20,6 @@ const Services = () => {
         <div className="hero-center">
           <h1>Our Services</h1>
         </div>
-        <div className="hero-right">
-          <ul>
-            <li>Industrial Services</li>
-            <li>Domestic - RO + UV + UF + TDS Adjuster + Mineral + Alkaline</li>
-            <li>Timely Services Response</li>
-            <li>Visit charges 10 km charge ₹350 ,
-            10 To 40 KM ₹550</li>
-          </ul>
-        </div>
       </div>
 
       <div className="services-content">
@@ -40,6 +31,8 @@ const Services = () => {
             <li>AMC - All Filter Changes</li>
             <li>1 Year Warranty Only Filter</li>
             <li>3 Service Free(Visit Charges Required)*</li>
+            <li>Visit charges 10 km charge ₹350 ,
+            10 To 40 KM ₹550</li>
             <li>Repair and Spare Parts</li>
             <li>Water Testing and Analysis</li>
           </ul>
