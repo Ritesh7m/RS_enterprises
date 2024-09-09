@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../Assets/logo.jpg';
 
-
-
 const Navbar = () => {
-const [menu,setMenu] = useState("Home");
+  const [menu, setMenu] = useState("Home");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className='navbar'>
@@ -13,17 +16,23 @@ const [menu,setMenu] = useState("Home");
         <img src={logo} alt="RS Enterprises Logo" />
         <p>RS-Enterprises</p>
       </div>
-      <ul className='nav-menu'>
-        <li onClick={()=>{setMenu("Home")}}>Home{menu==="Home"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu("Product")}}>Product{menu==="Product"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu("Services")}}>Services{menu==="Services"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu("Contact-us")}}>Contact-us{menu==="Contact-us"?<hr/>:<></>}</li>
+      {/* Hamburger Icon */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <span className={isMenuOpen ? "bar open" : "bar"}></span>
+        <span className={isMenuOpen ? "bar open" : "bar"}></span>
+        <span className={isMenuOpen ? "bar open" : "bar"}></span>
+      </div>
+      <ul className={`nav-menu ${isMenuOpen ? "open" : ""}`}>
+        <li onClick={() => { setMenu("Home"); setIsMenuOpen(false); }}>Home{menu === "Home" ? <hr /> : <></>}</li>
+        <li onClick={() => { setMenu("Product"); setIsMenuOpen(false); }}>Product{menu === "Product" ? <hr /> : <></>}</li>
+        <li onClick={() => { setMenu("Services"); setIsMenuOpen(false); }}>Services{menu === "Services" ? <hr /> : <></>}</li>
+        <li onClick={() => { setMenu("Contact-us"); setIsMenuOpen(false); }}>Contact-us{menu === "Contact-us" ? <hr /> : <></>}</li>
       </ul>
       <div className="nav-login-cart">
         <button className="login-btn">Login</button>
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
