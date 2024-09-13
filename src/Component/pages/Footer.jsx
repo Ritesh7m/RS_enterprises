@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
           <div className="contact-item">
             <FaInstagram className="footer-icon" />
-            <p>@rsenterprises_ro</p>
+            <p>@rs_enterprises15</p>
           </div>
         </div>
       </div>
